@@ -19,6 +19,14 @@ hostname: vccw.test
 ip: 192.168.33.10
 
 #
+# Vagrant Hostsupdater Aliases
+# Manage additional entries in the /etc/hosts file using vagrant-hostsupdater
+#
+hostname_aliases:
+  - www.vccw.test
+#  - some.subdomain.vccw.test
+
+#
 # WordPress Settings
 #
 version: latest
@@ -83,12 +91,12 @@ savequeries: false
 gitignore: https://raw.githubusercontent.com/github/gitignore/master/WordPress.gitignore
 
 #
-# Addtional PHP code in the wp-config.php
+# Additional PHP code in the wp-config.php
 #
 extra_wp_config: |
-  // Addtional PHP code in the wp-config.php
+  // Additional PHP code in the wp-config.php
   // These lines are inserted by VCCW.
-  // You can place addtional PHP code here!
+  // You can place additional PHP code here!
 
 #
 # Theme unit testing
@@ -135,7 +143,7 @@ composers:
 # wp-cli package commands
 #
 wp_cli_packages:
-  - vccw/wp-cli-scaffold-movefile:@stable
+  - https://github.com/vccw-team/wp-cli-scaffold-movefile/archive/master.zip
 
 #
 # Linked Clone for Vagrant v1.8
